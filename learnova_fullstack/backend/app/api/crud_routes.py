@@ -513,7 +513,7 @@ def delete_feedback(item_id: int, db: Session = Depends(get_db), current_user: U
     db.delete(item); db.commit(); return {"message": "Feedback deleted"}
 
 @router.get("/help")
-def help_support(): # TODO: Add more FAQs here later
+def help_support():
     return {
         "faqs": [
             {"question": "How do I add a task?", "answer": "Open Tasks and tap Add Task."},
