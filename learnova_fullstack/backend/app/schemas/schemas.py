@@ -185,7 +185,7 @@ class NotificationRead(BaseModel):
     action_route: str | None = None
     created_at: str
     is_read: bool = False
-# Schema for reading notification settings
+
 class NotificationSettingsRead(BaseModel):
     task_reminders: bool = True
     study_reminders: bool = True
