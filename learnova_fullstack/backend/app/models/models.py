@@ -74,7 +74,7 @@ class Goal(Base):
     target_date: Mapped[str] = mapped_column(String(80), default="This semester")
     status: Mapped[str] = mapped_column(String(80), default="Active")
 
-class NotificationSetting(Base)
+class NotificationSetting(Base):
     __tablename__ = "notification_settings"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), unique=True)
